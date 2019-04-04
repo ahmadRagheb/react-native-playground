@@ -17,7 +17,25 @@ export class Header extends React.Component {
     let display = this.state.isLoggedIn ? 'Sample User': this.props.message;
 
     return(
-      <Text onPress={this.toggleUser}>{display}</Text>
-    )
+      <View style={styles.headStyle}>
+        <Text style={styles.headText} onPress={this.toggleUser}>{display}</Text>
+      </View>
+
+    );
   }
 }
+
+
+const styles = StyleSheet.create({
+    headText: {
+      textAlign: 'right',
+      color: '#ffffff',
+      fontSize:20,
+    },
+    headStyle: {
+      paddingTop:30,
+      paddingBottom:10,
+      paddingRight:10,
+      backgroundColor:'#35605a',
+    }
+});
